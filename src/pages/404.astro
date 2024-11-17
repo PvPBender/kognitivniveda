@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - Stránka nenalezena | Společnost pro kognitivní vědu">
+	<main>
+		<h1><span class="text-gradient">404</span></h1>
+		<div class="content">
+			<p>Omlouváme se, ale požadovaná stránka nebyla nalezena.</p>
+			<a href="/" class="home-link">Zpět na hlavní stránku</a>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 6rem auto 2rem;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		text-align: center;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 2rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.content {
+		background: rgba(var(--accent-dark), 0.2);
+		border: 1px solid rgba(var(--accent-light), 0.2);
+		border-radius: 12px;
+		padding: 2rem;
+	}
+	.home-link {
+		display: inline-block;
+		margin-top: 1rem;
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.home-link:hover {
+		color: white;
+	}
+</style>
