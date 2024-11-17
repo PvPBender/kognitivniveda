@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="O nás | Společnost pro kognitivní vědu">
+	<main>
+		<h1>O <span class="text-gradient">společnosti</span></h1>
+		<div class="content">
+			<section>
+				<h2>Naše poslání</h2>
+				<p>
+					Společnost pro kognitivní vědu je organizace sdružující výzkumníky, akademiky a studenty
+					se zájmem o interdisciplinární studium mysli a kognice. Naším cílem je podporovat výzkum
+					v oblasti kognitivní vědy a propojovat odborníky z různých disciplín.
+				</p>
+			</section>
+			
+			<section>
+				<h2>Historie</h2>
+				<p>
+					Společnost byla založena s cílem vytvořit platformu pro spolupráci mezi různými obory
+					zabývajícími se studiem mysli, včetně psychologie, neurovědy, umělé inteligence,
+					filozofie, lingvistiky a dalších příbuzných disciplín.
+				</p>
+			</section>
+
+			<section>
+				<h2>Cíle</h2>
+				<ul>
+					<li>Podpora výzkumu v oblasti kognitivní vědy</li>
+					<li>Organizace konferencí a odborných setkání</li>
+					<li>Propojování výzkumníků napříč disciplínami</li>
+					<li>Popularizace kognitivní vědy</li>
+					<li>Podpora mladých výzkumníků a studentů</li>
+				</ul>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 6rem auto 2rem;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.content {
+		background: rgba(var(--accent-dark), 0.2);
+		border: 1px solid rgba(var(--accent-light), 0.2);
+		border-radius: 12px;
+		padding: 2rem;
+	}
+	section {
+		margin-bottom: 2rem;
+	}
+	h2 {
+		color: rgb(var(--accent-light));
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	ul {
+		margin: 0;
+		padding-left: 1.5rem;
+	}
+	li {
+		margin-bottom: 0.5rem;
+	}
+</style>

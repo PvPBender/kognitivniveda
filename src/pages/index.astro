@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Společnost pro kognitivní vědu">
+	<main>
+		<h1>Společnost pro <span class="text-gradient">kognitivní vědu</span></h1>
+		<p class="description">
+			Vítejte na stránkách České společnosti pro kognitivní vědu. Zabýváme se interdisciplinárním výzkumem mysli, vědomí a inteligence.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/about"
+				title="O společnosti"
+				body="Poznejte naši historii, poslání a cíle v oblasti kognitivní vědy."
+			/>
+			<Card
+				href="/research"
+				title="Výzkum"
+				body="Objevte naše aktuální výzkumné projekty a publikace."
+			/>
+			<Card
+				href="/members"
+				title="Členové"
+				body="Seznam našich členů a informace o možnostech členství."
+			/>
+			<Card
+				href="/events"
+				title="Události"
+				body="Kalendář konferencí, seminářů a workshopů."
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		text-align: center;
+		margin: 4rem 0 2rem;
+	}
+	.description {
+		margin: 2rem auto;
+		padding: 1.5rem;
+		border-radius: 8px;
+		background: rgba(var(--accent-dark), 0.2);
+		border: 1px solid rgba(var(--accent-light), 0.2);
+		text-align: center;
+		max-width: 60ch;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin: 4rem 0;
+	}
+</style>
