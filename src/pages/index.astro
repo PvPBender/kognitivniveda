@@ -16,7 +16,7 @@ import Card from '../components/Card.astro';
 					<p class="date">28. listopadu 2024 v 18:00</p>
 					<p class="title">Spontánní komunikace prizmatem kognitivní lingvistiky</p>
 					<p class="location">Kampus Hybernská</p>
-					<a href="/udalosti" class="more-info">Více informací →</a>
+					<a href="/events" class="more-info">Více informací →</a>
 				</div>
 			</div>
 			<div class="info-card">
@@ -31,7 +31,7 @@ import Card from '../components/Card.astro';
 				body="Poznejte naši historii, poslání a cíle v oblasti kognitivní vědy."
 			/>
 			<Card
-				href="/clanky"
+				href="/articles"
 				title="Články"
 				body="Objevte naše aktuální články a publikace."
 			/>
@@ -41,7 +41,7 @@ import Card from '../components/Card.astro';
 				body="Seznam našich členů a informace o možnostech členství."
 			/>
 			<Card
-				href="/udalosti"
+				href="/events"
 				title="Události"
 				body="Kalendář konferencí, seminářů a workshopů."
 			/>
@@ -74,6 +74,20 @@ import Card from '../components/Card.astro';
 		border: 1px solid rgba(var(--accent-light), 0.2);
 		text-align: center;
 		max-width: 60ch;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin: 4rem 0;
 	}
 	.quick-info {
 		display: grid;
@@ -123,19 +137,5 @@ import Card from '../components/Card.astro';
 	}
 	.more-info:hover {
 		color: white;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-		margin: 4rem 0;
 	}
 </style>
