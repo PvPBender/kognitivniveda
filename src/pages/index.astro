@@ -9,6 +9,21 @@ import Card from '../components/Card.astro';
 		<p class="description">
 			Vítejte na stránkách Společnosti pro kognitivní vědu. Zabýváme se interdisciplinárním výzkumem mysli, vědomí a inteligence.
 		</p>
+		<div class="quick-info">
+			<div class="info-card">
+				<h2>Nejbližší událost</h2>
+				<div class="event-details">
+					<p class="date">28. listopadu 2024 v 18:00</p>
+					<p class="title">Spontánní komunikace prizmatem kognitivní lingvistiky</p>
+					<p class="location">Kampus Hybernská</p>
+					<a href="/udalosti" class="more-info">Více informací →</a>
+				</div>
+			</div>
+			<div class="info-card">
+				<h2>Nejbližší schůze</h2>
+				<p class="meeting">Neurčeno</p>
+			</div>
+		</div>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="/about"
@@ -59,6 +74,55 @@ import Card from '../components/Card.astro';
 		border: 1px solid rgba(var(--accent-light), 0.2);
 		text-align: center;
 		max-width: 60ch;
+	}
+	.quick-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+	.info-card {
+		background: rgba(var(--accent-dark), 0.2);
+		border: 1px solid rgba(var(--accent-light), 0.2);
+		border-radius: 12px;
+		padding: 1.5rem;
+	}
+	.info-card h2 {
+		color: rgb(var(--accent-light));
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+	.event-details {
+		text-align: center;
+	}
+	.date {
+		color: rgb(var(--accent-light));
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+	.title {
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+	}
+	.location {
+		color: rgba(255, 255, 255, 0.8);
+		font-style: italic;
+		margin-bottom: 1rem;
+	}
+	.meeting {
+		text-align: center;
+		color: rgba(255, 255, 255, 0.8);
+		font-style: italic;
+	}
+	.more-info {
+		display: inline-block;
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.more-info:hover {
+		color: white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
