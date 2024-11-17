@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Členové | Společnost pro kognitivní vědu">
+	<main>
+		<h1>Naši <span class="text-gradient">členové</span></h1>
+		<div class="content">
+			<section>
+				<h2>Předsedkyně</h2>
+				<p>
+					<strong>Karin Zamrazilová</strong>
+				</p>
+			</section>
+
+			<section>
+				<h2>Předsednictvo</h2>
+				<ul>
+					<li><strong>Peter Guba</strong></li>
+					<li><strong>Jakub Landsperský</strong></li>
+					<li><strong>Eliška Pelclová</strong></li>
+					<li><strong>Jan Škrabálek</strong></li>
+				</ul>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 6rem auto 2rem;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.content {
+		background: rgba(var(--accent-dark), 0.2);
+		border: 1px solid rgba(var(--accent-light), 0.2);
+		border-radius: 12px;
+		padding: 2rem;
+	}
+	section {
+		margin-bottom: 2rem;
+	}
+	h2 {
+		color: rgb(var(--accent-light));
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	ul {
+		margin: 0;
+		padding-left: 1.5rem;
+	}
+	li {
+		margin-bottom: 0.5rem;
+	}
+</style>
